@@ -21,7 +21,7 @@
 # Check your working directory
 getwd()
 # If necessary, set your working directory
-setwd("c:/IVEL/Dropbox/!Active/Study/Statistics/Labs")
+#setwd("c:/IVEL/Dropbox/!Active/Study/Statistics/Labs")
 
 # If necessary, install packages
 # install.packages("psych")

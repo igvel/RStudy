@@ -14,9 +14,9 @@
 #     Sample size is N = 200
 
 # Check your working directory
-# getwd()
+#getwd()
 # If necessary, set your working directory
-setwd("c:/IVEL/Dropbox/!Active/Study/Statistics/Labs")
+setwd(paste(getwd(), "/Labs", sep=""))
 
 # If necessary, install packages
 # install.packages("psych")
@@ -59,7 +59,6 @@ plot(PE$endurance ~ PE$age, main = "Scatterplot", ylab = "Endurance", xlab = "Ag
 abline(lm(PE$endurance ~ PE$age), col="blue")
 
 model2 <- lm(PE$endurance ~ PE$activeyears)
-?lm
 summary(model2)
 plot(PE$endurance ~ PE$activeyears, main = "Scatterplot", ylab = "Endurance", xlab = "Active Years")
 abline(lm(PE$endurance ~ PE$activeyears), col="blue")
@@ -78,6 +77,7 @@ abline(lm(PE$endurance ~ PE$predicted), col="blue")
 # The function fitted returns predicted scores whereas the function resid returns residuals
 PE$e <- resid(model3)
 
+# This plot checks for heteroscedasticity
 hist(PE$e)
 plot(PE$predicted ~ PE$e, main = "Scatterplot", ylab = "Model 3 Predicted Scores", xlab = "Model 3 Residuals")
 abline(lm(PE$predicted ~ PE$e), col="blue")
