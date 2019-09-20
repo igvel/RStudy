@@ -2,7 +2,7 @@
 plot(countries$GDP, countries$Piracy)
 
 # Correlation test between two data sets
-cor.test(c­ountries$G­DP, count­ries$Pirac­y)
+cor.test(countries$GDP, countries$Piracy)
 ?cor.test
 # Linear model that best represents all our data points 
 #(with a certain degree of error). 
@@ -10,7 +10,7 @@ cor.test(c­ountries$G­DP, count­ries$Pirac­y)
 #which is represented by a response variable (piracy rate), 
 #a tilde character (~), and a predictor variable (GDP). 
 #(Note that the response variable comes first.)
-line <- lm(co­untries$Pi­racy ~ count­ries$GDP) 
+line <- lm(countries$Piracy ~ countries$GDP) 
 abline(line)
 
 ?abline
